@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel = "stylesheet" type = "text/css" href = "/style/admin_style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+</head>
+<style>
+    <style>
+        /*the style of the whole page which is set to have a background color of lightgrey width of 90% and height to fill the whole screen
+             in different screen resolution and be 55px away from the screen in left & right side*/
+    body {
+        background-color: #b3d5f5;
+    }
+    /*the style of the header set to be on the centre and background color set to black*/
+    .header {
+        padding: 10px;
+        text-align: center;
+        background-image: url(img/GuardiansBackground.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+    }
+    .header h1 {
+        font-size: 90px;
+    }
+    .navbar {
+        overflow: hidden;
+        background-color: black;
+        height: 55px;
+        align:center:
+    }
+    /*the style of the navigation bars*/
+    .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 20px 30px;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+        border-radius: 3px;
+    }
+    /*the style of the navigation to change color to blue on hover */
+    .navbar a:hover {
+        background-color: #21c9eb;
+    }
+    a.active,a:hover{
+        background: darkblue;
+        transition: 1s;
+    }
+    /*the search bar set to be 5px from the top and to be at the right*/
+    .search-form{
+        margin-top: 15px;
+        float: right;
+    }
+    /*the style of the text in search bar set to be 5px from the search
+    boders and set to be san-serif for font*/
+    input[type=text]{
+        padding: 5px;
+        font-family: san-serif;
+    }
+    /*the button set to have the blue background color and the text to be white
+    the right coners are set have a small curve,the cursoris set to be a hand like tool,
+    it's padding is 5px and have a san-serif font for the text*/
+    button{
+        float: right;
+        background-color: blue;
+        color: white;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        padding: 5px;
+        font-family: san-serif;
+    }
+    button:hover{
+        background-color: darkblue;
+        border-radius: 5px;
+    }
+    article {
+        padding-top: 25px;
+        width: 55%;
+        height: 40;
+        clear: left;
+        float: left;
+    }
+    /*coloum*/
+    aside {
+        width: 40%;
+        float: right;
+        clear: right;
+        padding-top: 10px;
+    }
+    /*the style of the footer should be at the bottom of the web page*/
+    .footer {
+        padding: 20px;
+        text-align: center;
+        background: #000000;
+        margin-bottom: 0;
+        clear: both;
+    }
+    .socials a:hover{
+        background-color: ;
+        padding: 12px 12px;
+        border-radius: 35px;
+    }
+    .socials a{
+        background-color:white ;
+        padding: 12px 12px;
+    }
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        position: relative;
+        width: 1100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 30px;
+    }
+    .container .card{
+        position: relative;
+        max-width: 300px;
+        height: 215px;
+        background: #fff;
+        margin: 30px 10px;
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 20px rgb(12, 12, 12);
+        transition: 0.3s ease-in-out;
+    }
+    .container .card:hover{
+        height: 420px;
+    }
+    .container .card .imgBox{
+        position: relative;
+        width: 260px;
+        height: 260px;
+        top: -60px;
+        left: 20px;
+        z-index: 1;
+    }
+    .container .card .imgBox img{
+        width: 100%;
+        border-radius: 4px;
+    }
+    .container .card .cardcontent{
+        position: relative;
+        margin-top: -100px;
+        padding: 10px 15px;
+        text-align: center;
+        color: #111;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+    .container .card:hover .cardcontent{
+        visibility: visible;
+        opacity: 1;
+        margin-top: -10px;
+        transition-delay: 0.3s;
+    }
+    .footer{
+        background-color:black;
+    }
+    li {
+        float: left;
+    }
+    .image22{
+        position: absolute;
+        left: 5%;
+        top:30%;
+        border: 5px; solid darkgray;
+        box-shadow: 1px 2px 4px;
+    }
+    .image22:hover{
+        box-shadow: 6px 6px 9px;
+        transform: scale(1.2);
+    }
+    .image23{
+        position: absolute;
+        left: 40%;
+        top:30%;
+        border: 5px; solid darkgray;
+        box-shadow: 1px 2px 4px;
+    }
+    .image23:hover{
+        box-shadow: 6px 6px 9px;
+        transform: scale(1.2);
+    }
+
+    .image24{
+        position: absolute;
+        left: 70%;
+        top:30%;
+        border: 5px; solid black;
+        box-shadow: 1px 2px 4px;
+    }
+    .image24:hover{
+        box-shadow: 6px 6px 9px;
+        transform: scale(1.2);
+    }
+
+</style>
+</style>
+<body>
+<div class="header">
+    <h1>REDFOX
+        <br> MOVIE WEBSITE</h1>
+</div>
+<nav><div class="navbar">
+    <center>
+        <a class="active" href="#">Home Page</a>
+        <a href="#">About</a>
+        <a href="contact.jsp">Contact</a>
+        <a href="signup.jsp">SignUp</a>
+        <a href="MovieList.jsp">MovieList</a>
+    </center>
+</div>
+    <form class ="search-form">
+        <input type ="text" placeholder ="Search">
+        <button>Search</button>
+    </form>
+</nav>
+<center>
+<B><h2>WELCOME TO RedFox</h2></B>
+<h4>Best Movie Website</h4>
+</center>
+<BR>
+<!--Video Container-->
+<center>
+    <div class="d-flex justify-content-center h-25">
+        <a href="login_client.jsp" class="btn btn-primary" role="button">Subscriber</a>
+        <a href="login_employee.jsp" class="btn btn-primary" role="button">Employee</a>
+        <a href="login_admin.jsp" class="btn btn-primary" role="button">Administrator</a>
+    </div>
+</center>
+<Center>
+    <h2>Trending Movies</h2>
+</Center>
+<section>
+    <div class="container">
+        <div class="card">
+            <div class="imgBox">
+                <img src="img/Kong.jpg">
+            </div>
+            <div class="cardcontent">
+                <h3>King Kong</h3>
+                <p>
+                    About Spiderman here
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBox">
+                <img src="img/Spiderman.jpg">
+            </div>
+            <div class="cardcontent">
+                <h3>The Amazing Spiderman </h3>
+                <p>Spiderman Here</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBox">
+                <img src="img/StepBrothers.jpg">
+            </div>
+            <div class="cardcontent">
+                <h3>StepBrothers</h3>
+                <p> StepBrothers here</p>
+            </div>
+        </div>
+</section>
+<!--Video Container-->
+<footer class="footer">
+
+    <nav>
+        <ul class="socials">
+            <a href="https://www.facebook.com/campaign/landing.php?campaign_id=1641457644&extra_1=s%7Cc%7C314952196712%7Ce%7Cfacebook%7C&placement=&creative=314952196712&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D1641457644%26adgroupid%3D65407979209%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-541132862%26loc_physical_ms%3D9070121%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiAhP2BBhDdARIsAJEzXlG9cZ9rRhdqKIsRhEm8eo24H8aLu9eX7L4MVGKrRJb3REyJL9ds85saArFsEALw_wcB"><i class="fab fa-facebook-f"></i></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/login?lang=en"><i class="fab fa-twitter fa-lg"></i></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>
+            &nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+        </ul>
+</footer>
+
+<script src="https://kit.fontawesome.com/cf3ed56923.js" crossorigin="anonymous"></script>
+
+</div>
+</body>
+</html>
